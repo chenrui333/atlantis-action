@@ -1,7 +1,4 @@
-FROM alpine:3.10
+FROM runatlantis/atlantis:v0.11.1
 
-COPY LICENSE README.md /
 
-COPY entrypoint.sh /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+RUN chown -R atlantis:atlantis /usr/local/bin/atlantis
